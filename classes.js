@@ -101,10 +101,13 @@ class Typing{
 }
 
 class Pokemon{
-    constructor(name,type,health,id){
+    constructor(name,type,health,speed,defense,attack,id){
         this.moves =[];
         this.name= name;
         this.type=type;
+        this.attack = attack;
+        this.defense = defense;
+        this.speed = speed;
         this.health = health;
         this.id = id;
     }
@@ -127,8 +130,6 @@ class Move{
         this.effectChance= effectChance;
         this.acc = acc;
         this.pp = pp;
-    }
-    go(){
     }
 }
 class Trainer{
