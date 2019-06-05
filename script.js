@@ -18,6 +18,25 @@ function attack(attack,attacker,receiver){
             attackPower*=.5;
         }
     }
+    if(receiver.defense>attacker.attackPow){
+        let pure= receiver.defense-attacker.attackPower;
+        pure*=.01;
+        let final = 1-pure;
+        attackPower*= final;
+    }
+    if(receiver.defense<attacker.attackPow){
+        let pure= attacker.attackPower-receiver.defense;
+        pure*=.01;
+        let final = 1-pure;
+        attackPower*= final;
+    }
+    return attackPower;
+}
+//function to initiate attack of the two pokemon taking their turns
+function sendIt(fighter1, fighter2){
+
+}
+function takeAttack(damage,receiver){
 
 }
 
