@@ -96,7 +96,7 @@ class Typing{
         this.weakness = weakness;
     }
     setResistance(resistance){
-        this.effective = resistance;
+        this.resistance = resistance;
     }
 }
 
