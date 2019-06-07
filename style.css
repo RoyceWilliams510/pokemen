@@ -12,3 +12,15 @@
 #nameTaker{
     margin-top: 50px;
 }
+.menuCharts{
+
+}
+#trainer1Menu{
+position: absolute;
+    top: 8%
+}
+#trainer2Menu{
+    position: absolute;
+    top: 8%;
+    margin-left:500px;
+}
