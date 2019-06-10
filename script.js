@@ -30,7 +30,10 @@ function attack(attack,attacker,receiver){
         let final = 1-pure;
         attackPower*= final;
     }
-    return attackPower;
+    let determiner = Math.random();
+    if(1-attack.acc>determiner){
+        return attackPower;
+    }
 }
 //function to initiate attack of the two pokemon taking their turns
 function sendIt(fighter1, fighter2){
@@ -39,4 +42,5 @@ function sendIt(fighter1, fighter2){
 function takeAttack(damage,receiver){
 
 }
+
 

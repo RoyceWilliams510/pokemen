@@ -13,15 +13,15 @@ class Typing{
 }
 
 class Move{
-    constructor(type,damage,effectChance,acc,pp){
+    constructor(type,damage,acc,pp){
         this.type = type;
         this.damage= damage;
-        this.effectChance= effectChance;
         this.acc = acc;
         this.pp = pp;
     }
 }
 
+var flamethrower = new Move(fire,100,1,10);
 class Trainer{
     constructor(){
         this.teamCount =0;

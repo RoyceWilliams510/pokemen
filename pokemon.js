@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $("#intro").html("Welcome to AlbinMon the pokemon simulator designed by Royce Williams and Dylan Delancie");
+    $("#fatldi").hide();
     $("#go").click(function(){
         var trainer1Name =$("#trainer1Name").val();
         var trainer2Name = $("#trainer2Name").val();
@@ -11,6 +12,9 @@ $(document).ready(function() {
         alert("Hello "+ trainer1.name+" and "+trainer2.name+" welcome to our game. Your next step is to go and select the available pokemon below to battle each other with.");
         $("#intro").hide();
         constructMenus();
+        $("#fatldi").show();
+
+
     });
 });
 //newPokemon(name, type, health, speed, defense, attack, id)
