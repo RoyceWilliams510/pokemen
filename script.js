@@ -36,7 +36,14 @@ function attack(attack,attacker,receiver){
     }
 }
 //function to initiate attack of the two pokemon taking their turns
-function sendIt(fighter1, fighter2){
+function sendIt(){
+    trainer1.setCurrentPokemon(trainer1.pokemons[0]);
+    trainer2.setCurrentPokemon(trainer2.pokemons[0]);
+    var moves= "";
+    for(var i = 0; i<3; i++){
+        moves+="<button id ='move"+i+"value ='"+i+"'>"+trainer1.currentPokemon.moves[i].name+"</button> ";
+    }
+    $("#battleGround").html();
 
 }
 function takeAttack(damage,receiver){

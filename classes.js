@@ -13,7 +13,8 @@ class Typing{
 }
 
 class Move{
-    constructor(type,damage,acc,pp){
+    constructor(name,type,damage,acc,pp){
+        this.name =name;
         this.type = type;
         this.damage= damage;
         this.acc = acc;
@@ -21,12 +22,9 @@ class Move{
     }
 }
 
-var flamethrower = new Move(fire,100,1,10);
 class Trainer{
     constructor(){
-        this.teamCount =0;
         this.pokemons = [];
-        this.currentPokemon =[];
     }
     addPokemon(pokemonId){
         if(this.pokemons.length<=3) {
@@ -45,6 +43,9 @@ class Trainer{
     }
 
     switchPokemon(pokemonId){
+    }
+    setCurrentPokemon(pokemon){
+        this.currentPokemon= [pokemon];
     }
 }
 
@@ -71,6 +72,24 @@ class Pokemon{
 
 }
 
+class battleGround{
+    constructor(trainer1,trainer2){
+        this.battler1 = trainer1.currentPokemon;
+        this.battler2 = trainer2.currentPokemon;
+        this.team1 =trainer1.pokemons;
+        this.team2 = trainer2.pokemons;
+    }
+    teamHealths(){
+        this.team1Healths = [];
+        this.team2Healths = [];
+        for(var i =0; i<4; i++){
+            this.team1Healths.push(this.team1[i].health);
+            this.team2Healths.push(this.team2[i].health);
+        }
+    }
+
+
+}
 
 var electricity = new Typing("electricity");
 var fire = new Typing("fire");
@@ -199,6 +218,10 @@ var allPokemon =[venosaur,charizard,blastoise,raichu,arcanine,alakazam,machamp,g
     ,latias,kyogre,groudon,rayquaza,jirachi,deoxys];
 var trainer1 = new Trainer();
 var trainer2 = new Trainer();
+
+
+//all moves
+var flamethrower = new Move("flamethrower",fire,100,1,10);
 
 
 
